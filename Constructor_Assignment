@@ -1,0 +1,44 @@
+package Assignment_Constructors;
+public class Constructor {
+	String name;
+	int age;
+	char section;
+	char gender;
+	int subject1;
+    int subject2;
+    int subject3;
+    long total;
+    static long k;
+    
+    public Constructor(){                //default parameter
+    	System.out.println("Java");
+        } 
+    public Constructor(String i,int w,char u,char g,int a,int b,int c,long k){
+        name=i;
+        age=w;
+        section=u;
+        gender=g;
+    	subject1=a;
+    	subject2=b;
+    	subject3=c;
+    	total=subject1+subject2+subject3;
+    	
+    }
+    void display()
+    {
+    	System.out.println("variables are " +name+","+age+","+section+","+gender+","+subject1+","+subject2+","+subject3);
+    	System.out.println("total marks of " +name+"  is:" +total);
+    
+    }
+    public static void main(String args[]){
+    	Constructor s1=new Constructor("Monika",23,'A','F',10,10,20,k);
+    	Constructor s2=new Constructor("Ganesh",24,'A','M',0,40,10,k);
+    	Constructor s3=new Constructor("Vinay",24,'B','M',0,40,50,k);
+    	Constructor s4=new Constructor("Sushma",22,'A','F',40,60,90,k);
+    	s1.display();
+    	s2.display();
+    	s3.display();
+    	s4.display();
+    }
+}
+
