@@ -1,0 +1,70 @@
+package program.jav.inheritance;
+
+class Product1{
+	int id=78;
+	String name="Amul";
+ void display()
+    {
+		System.out.println("Product id and name are"+id +name);	
+	}
+}
+class TestA extends Product1{
+	void monika2(){
+		int count=50;
+		String category="butter";
+		
+	     System.out.println("Variables of TestA are: " +count +category);
+	}
+}
+class SUBA extends TestA
+{
+	    void monika3()
+    {
+	     int price=30;
+		long totalprice=count+price;
+		System.out.println(+id+name+category);
+	} 
+}
+class TestB extends Product1{
+	void monika1(){ 
+		int count =90;
+		String category="Milk";
+	System.out.println("Variables of TestB are: "+count +category);
+	}		
+}
+class SUBB extends TestB
+{
+	void monika4()
+	{
+		int price=10;
+		double totalprice=count+price;
+		System.out.println("Variables of SUBB are"+totalprice+id+name+category);
+	}
+}
+class TestC extends Product1{
+	void monika(){
+		int count=56;
+		String category="choco";
+	System.out.println("Variables of TestC are: "+count +category );
+	}			
+}
+
+ class Product{  
+	public static void main(String args[]){
+	
+    TestC ob=new TestC();
+    ob.display();
+    ob.monika();
+    TestB k=new TestB();
+    k.display();
+    k.monika1();
+    TestA m=new TestA();
+    m.display();
+    m.monika2();
+    SUBA j=new SUBA();
+    j.monika3();
+    SUBB g=new SUBB();
+    g.monika4();
+   
+ }
+ }
