@@ -1,0 +1,115 @@
+//Package1(TestM,TestN,Testp)
+// class TestM
+package Package1;
+
+public class TestM {
+	private int z=45;
+	long a=100;
+	protected float b=(float) 0.001;
+	
+	public void methodPublic(){   
+		methodPrivate();
+	}
+	
+   protected void methodProtected(){   
+		methodPrivate();
+	}
+	
+	void methodDefault(){    
+		methodPrivate();
+	}
+	private void methodPrivate(){ 
+		System.out.println("Class TestM: Welcome");
+    }
+}
+//Class TestN
+package Package1;
+
+public class TestN {
+	protected long c=2000;
+	public int d=40;
+	double e=5000;
+	
+	void methodDefault(){    
+		methodPrivate();
+	}
+
+	protected void methodProtected() {
+		methodPrivate();
+	}
+	public void methodPublic() {
+		methodPrivate();
+	}
+	private void methodPrivate(){ 
+		System.out.println("Class TestN: To Core Java");
+    }
+
+}
+//Class TestP
+package Package1;
+
+public class TestP {
+
+	public void methodPublic(){   
+		methodPrivate();
+	}
+	
+   protected void methodProtected(){   
+		methodPrivate();
+	}
+	
+	void methodDefault(){    
+		methodPrivate();
+	}
+	private void methodPrivate(){ 
+		System.out.println("Class TestP: Training");
+    }
+	public static void main(String args[]) {
+		System.out.println("Value of long of TestM:"+ new TestM().a);
+		System.out.println("Value of float of TestM:"+ new TestM().b);
+	System.out.println("Value of long of TestN:"+ new TestN().c);
+	System.out.println("Value of integer of TestN:"+ new TestN().d);
+	System.out.println("Value of double of TestN:"+ new TestN().e);
+}
+}	
+//Package2(TestX,TestY,TestZ)
+//Class TestX
+package Package2;
+
+public class TestX {
+	private int f=50;
+	long g=10000;
+	protected float h=(float) 0.1;
+	public char red;
+}
+//Class TestY
+package Package2;
+
+import Package1.TestM;
+import Package1.TestN;
+public class TestY extends Package1.TestN{
+	   public static void main(String[] args){
+		new TestN().methodPublic();
+		new TestM().methodPublic();
+		System.out.println("Value of long of TestX:"+ new TestX().g);
+		System.out.println("Value of float of TestX:"+ new TestX().h);
+		System.out.println("Value of float of TestX:"+ new TestX().red);
+		
+}
+}
+//Class TestZ
+package Package2;
+import Package1.TestM;
+import Package1.TestN;
+import Package1.TestP;
+public class TestZ extends Package1.TestN{
+	   public static void main(String[] args){
+		new TestN().methodPublic();
+		new TestM().methodPublic();
+		new TestP().methodPublic();
+		System.out.println("Value of long of TestX:"+ new TestX().g);
+		System.out.println("Value of float of TestX:"+ new TestX().h);
+		System.out.println("Value of float of TestX:"+ new TestX().red);
+		
+}
+}
