@@ -1,0 +1,23 @@
+package Assignment_Datatype;
+
+public class Datatype {
+	public static void main(String args[]){
+	char status='J';
+	System.out.println("value of j is"+ status);
+	int r=status;
+	float f=(float)r;
+	System.out.println("value of r is"+r);
+	
+	float h=456.9822f;
+	long l=(long)h;
+	char ch=(char) l;
+	System.out.println("value of h is"+h);
+	  
+	double d=756654.876786876876;
+	int i=(int)d;
+	long ll=i;
+	byte g=(byte)ll;
+	System.out.println("Value of d is"+d);
+	
+	}
+}
