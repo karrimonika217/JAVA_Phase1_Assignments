@@ -1,0 +1,25 @@
+package Functionoverloading_Assignment;
+
+public class Functionoverload {
+	public void Calculate(int a, int c)
+	{
+		System.out.println("Addition of two numbers is:-"+(a+c));
+	}
+	public void Calculate(float r)
+	{
+		System.out.println("Area of the circle is:-"+(3.14*r*r));
+	}
+	public void Calculate(double l,long b)
+	{
+		System.out.println("Area of the rectangle is:-"+(l*b));
+	}
+	
+	 public static void main(String args[])
+	    {
+	     Functionoverload ob=new Functionoverload();
+	      ob.Calculate(10,12);
+	      ob.Calculate(7.1f); 
+	      ob.Calculate(10.4,4);
+	    }
+
+}
